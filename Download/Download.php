@@ -23,9 +23,10 @@ abstract class Download extends Object implements IDownload {
 	 * explicit formating number for rating, use UPPERCASE key in array
 	 * @var array
 	 */
-	protected $defaultCurrency = array('CZK' => '1 Kč', // add default format
-			'EUR' => array('1€', 2, ',', '.'),
-			'USD' => array('$1', 2, '.', ','),
+	protected $defaultCurrency = array(
+		'CZK' => array('1 Kč', 0, ',', ' '), // add default format
+		'EUR' => array('1€', 2, ',', '.'),
+		'USD' => array('$1', 2, '.', ','),
 	);
 
 	/**
