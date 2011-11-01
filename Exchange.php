@@ -159,8 +159,8 @@ class Exchange extends \ArrayIterator implements IExchange {
 	 */
 	public function registerAsHelper($tpl = NULL) {
 		$tpl = ($tpl === NULL) ? $this->context->application->template : $tpl;
-		$tpl->registerHelper('formatVat', callback($this, 'formatVat'));
-		$tpl->registerHelper('format', callback($this, 'format'));
+		$tpl->registerHelper('currencyVat', callback($this, 'formatVat'));
+		$tpl->registerHelper('currency', callback($this, 'format'));
 		$tpl->exchange = $this;
 	}
 
